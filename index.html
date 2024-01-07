@@ -6,18 +6,36 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
-    <!-- Chart Js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="./theme.css" />
+
+    <!-- chart js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module">
+        const loading = document.getElementById('loading');
+        addEventListener('py:ready', () => loading.close());
+        loading.showModal();
+    </script>
 </head>
 <body>
-    <h1>Polyglot 🦜 💬 🇬🇧 ➡️ 🏴‍☠️</h1>
-    <p>Translate English into Pirate speak...</p>
-    <input type="text" name="english" id="english" placeholder="Type English here..." />
-    <button py-click="translate_english">Translate</button>
-    <div id="output"></div>
+    <dialog id="loading">
+        <h1>Loading...</h1>
+    </dialog>
+    <div id="title">
+        <img width="100" height="100" src="https://img.icons8.com/bubbles/100/home-page.png" alt="home-page"/>
+        <div id="title_text">
+            <h1>Mortgage calculator</h1>
+            <p><em>wih customizable parameters</em></p>
+        </div>
+    </div>
+    
+    <input type="number" id="interest_rate" placeholder="Type interest rate..."  value="2.59"/>
+    <input type="number" id="principal_amount" placeholder="Type principal..." value="5160000"/>
+    <input type="number" id="loan_years" placeholder="Type years..." value="30"/>
+    <button py-click="calculate_morgage">Calculate</button>
     <canvas id="chart"></canvas>
-    <script type="py" src="./src/main.py" config="./pyscript.json"></script>
-    <script src="src/plotting.js"></script>
+
+    <script type="py" src="src/main.py" config="pyscript.json"></script>
+    <script src="src/plotting/mortgage_overview.js"></script>
+    
 </body>
 </html>

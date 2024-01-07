@@ -1,3 +1,4 @@
 {
-    "python.defaultInterpreterPath": "D:\\git\\mortcalc\\venv\\Scripts\\python.exe"
+    "python.defaultInterpreterPath": "D:\\git\\mortcalc\\venv\\Scripts\\python.exe",
+    "editor.rulers": [100]
 }

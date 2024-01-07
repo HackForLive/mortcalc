@@ -2,4 +2,5 @@ plotly
 arrr
 js
 pyscript
-pyodide
+#pyodide can not be downloaded
+bokeh

@@ -7,3 +7,24 @@ canvas {
     max-width: 800px;
     max-height: 400px;
 }
+
+#title {
+    display: flex;
+}
+
+#title_text {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+#title h1 {
+    font-size: xx-large;
+    color: brown;
+    margin: 10px;
+}
+
+#title p {
+    font-size: large;
+    color: brown;
+}

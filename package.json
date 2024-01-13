@@ -5,13 +5,17 @@
   "scripts": {
     "css:scss": "node-sass --output-style compressed -o dist src/scss",
     "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
-    "build:css": "npm run css:scss && npm run css:autoprefixer",
+    "build:css": "npm run css:lint && npm run css:scss && npm run css:autoprefixer",
+    "css:lint": "npx stylelint src/scss/*.scss  --custom-syntax postcss-scss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "hackforlive",
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "node-sass": "^9.0.0",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "postcss-scss": "^4.0.9",
+    "stylelint": "^16.1.0",
+    "stylelint-config-recommended": "^14.0.0"
   }
 }

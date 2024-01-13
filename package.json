@@ -1,0 +1,17 @@
+{
+  "name": "static-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "css:scss": "node-sass --output-style compressed -o dist src/scss",
+    "css:autoprefixer": "postcss -u autoprefixer -r dist/*.css",
+    "build:css": "npm run css:scss && npm run css:autoprefixer",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hackforlive",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "node-sass": "^9.0.0",
+    "postcss-cli": "^11.0.0"
+  }
+}

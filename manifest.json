@@ -10,31 +10,31 @@
 	"orientation": "portrait-primary",
 	"icons": [
         {
-            "src": "assets/img/home-64.png",
+            "src": "src/images/home-64.png",
             "sizes": "64x64",
             "type": "image/png"
         },
         {
-            "src": "assets/img/home-128.png",
+            "src": "src/images/home-128.png",
             "sizes": "128x128",
             "type": "image/png"
         },
         {
-            "src": "assets/img/home-192.png",
+            "src": "src/images/home-192.png",
             "sizes": "192x192",
             "type": "image/png"
         }
 	],
     "screenshots": [
         {
-            "src": "assets/img/house.png",
+            "src": "src/images/house.png",
             "sizes": "512x512",
             "type": "image/png",
             "form_factor": "wide",
             "label": "Home Widget"
         },
         {
-            "src": "assets/img/house.png",
+            "src": "src/images/house.png",
             "sizes": "512x512",
             "type": "image/png",
             "form_factor": "narrow",

@@ -1,4 +1,6 @@
-const chart = new Chart("chart", {
+import { Chart } from "chart.js"
+
+chart = new Chart("chart_canvas", {
     type: "bar",
     data: {
       datasets: [
@@ -23,8 +25,9 @@ const chart = new Chart("chart", {
       },
     }
   })
+
   
-  function updateChart(xValues, remaining_principal, interest_paid_term) {
+export function updateChart(xValues, remaining_principal, interest_paid_term) {
     chart.data.labels = xValues
     chart.data.datasets[0] = {
         data: remaining_principal,
@@ -47,11 +50,11 @@ const chart = new Chart("chart", {
     chart.update()
   }
 
-if ("serviceWorker" in navigator) {
-window.addEventListener("load", function() {
-    navigator.serviceWorker
-    .register("/serviceWorker.js")
-    .then(res => console.log("service worker registered"))
-    .catch(err => console.log("service worker not registered", err))
-})
-}
+// if ("serviceWorker" in navigator) {
+// window.addEventListener("load", function() {
+//     navigator.serviceWorker
+//     .register("/serviceWorker.js")
+//     .then(res => console.log("service worker registered"))
+//     .catch(err => console.log("service worker not registered", err))
+// })
+// }

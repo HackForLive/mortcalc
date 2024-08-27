@@ -13,16 +13,24 @@ module.exports = {
             type: 'global',
         },
     },
-    module: {
-        rules: [{
-            test: /\.m?js$/,
-            exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader',
-                options: {
-                    presets: ['@babel/preset-env']
-                }
-            }
-        }]
+    resolve: {
+        alias: {
+          'node_modules': path.join(__dirname, 'node_modules'),
+        }
     }
+    // module: {
+    //     rules: [{
+    //         test: /\.m?js$/,
+    //         exclude: /node_modules/,
+    //         use: {
+    //             loader: 'babel-loader',
+    //             options: {
+    //                 presets: [
+    //                     ['@babel/preset-env', { targets: "defaults" }]
+    //                 ],
+    //                 plugins: ['@babel/plugin-transform-class-properties']
+    //             }
+    //         }
+    //     }]
+    // }
 }

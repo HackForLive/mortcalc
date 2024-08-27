@@ -5,9 +5,9 @@ import itertools
 import functools
 
 from pyscript import document
-# from js import updateChart
+from js import updateChart
 
-# from pyodide.ffi import to_js
+from pyodide.ffi import to_js
 
 MONTHS_IN_YEAR = 12
 TO_PERCENTAGE = 0.01
@@ -106,4 +106,4 @@ def calculate_morgage(event):
 
     remaining_principal = list(map(lambda x: x if x > 0 else 0, remaining_principal))
     interest_paid_term = list(map(lambda x: x if x > 0 else 0, interest_paid_term))
-    # updateChart(to_js(years), to_js(remaining_principal), to_js(interest_paid_term))
+    updateChart(to_js(years), to_js(remaining_principal), to_js(interest_paid_term))
